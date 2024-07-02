@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Forme - zadatak</title>
+	</head>
+	<body>
+		<form action="" method="POST" enctype="text/plain" autocomplete="on">
+			<p>
+				<label for="imeiprezime">
+					Ime i prezime *<br />
+					<input
+						type="text"
+						name="imeiprezime"
+						id="imeiprezime"
+						required
+						placeholder="Vase ime i prezime"
+					/>
+				</label>
+			</p>
+
+			<p>
+				<label for="email">
+					E-mail adresa *<br />
+					<input
+						type="email"
+						name="email"
+						id="email"
+						required
+						placeholder="Upisite valjanu email adresu"
+					/>
+				</label>
+			</p>
+
+			<p>
+				<label for="tel">
+					Kontakt broj telefona <br />
+					<input type="tel" name="tel" id="tel" />
+				</label>
+			</p>
+
+			<p>
+				<label for="datum">
+					Datum rodenja <br />
+					<input type="date" name="datum" id="datum" />
+				</label>
+			</p>
+
+			<p>
+				Koje jezike govorite? <br />
+				<label for="en">
+					Engleski
+					<input type="checkbox" id="en" name="jezici" value="en" />
+				</label>
+				<label for="de">
+					Njemacki
+					<input type="checkbox" id="de" name="jezici" value="de" />
+				</label>
+				<label for="it">
+					Talijanski
+					<input type="checkbox" id="it" name="jezici" value="it" />
+				</label>
+				<label for="fr">
+					Francuski
+					<input type="checkbox" id="fr" name="jezici" value="fr" />
+				</label>
+				<label for="es">
+					Spanjolski
+					<input type="checkbox" id="es" name="jezici" value="es" />
+				</label>
+			</p>
+
+			<p>
+				Jeste li do sada koristili usluge nase tvrtke? <br />
+				<label for="uslugeDa">
+					Da
+					<input type="radio" name="usluge" id="uslugeDa" value="da" />
+				</label>
+				<label for="uslugeNe">
+					Ne
+					<input type="radio" name="usluge" id="uslugeNe" value="ne" />
+				</label>
+			</p>
+
+			<p>
+				<label for="zivotopis">
+					Prilozite zivotopis <br />
+					<input type="file" name="zivotopis" id="zivotopis" />
+				</label>
+			</p>
+
+			<p>
+				<input type="reset" value="Ponisti" />
+				<input type="submit" value="Prijavi se" />
+			</p>
+		</form>
+	</body>
+</html>
