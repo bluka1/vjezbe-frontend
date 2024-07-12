@@ -17,3 +17,7 @@ Ovo je repozitorij gdje će biti sve vježbe koje ćemo obrađivati tijekom pred
 - flexbox and grid: [CodingFantasy](https://codingfantasy.com/games)
 - flexbox - [FlexboxFroggy](https://flexboxfroggy.com/)
 - grid - [GridGarden](https://cssgridgarden.com/)
+
+### Fontovi
+
+- google fonts: [GoogleFonts](https://fonts.google.com/)
