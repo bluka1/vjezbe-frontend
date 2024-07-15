@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Selektori atributa</title>
+
+		<style>
+			body {
+				color: rgb(40, 40, 40);
+				font-family: Verdana, Tahoma, Geneva, sans-serif;
+				font-size: 20px;
+			}
+			/* targetiramo sve elemente koji sadrze title atribut bez obzira na njegovu vrijednost */
+			[title] {
+				text-decoration: underline red;
+			}
+
+			/* targetiramo sve elemente koji sadrze title atribut s tocnom vrijednoscu koju trazimo */
+			[title='prvi odlomak'] {
+				font-weight: bold;
+			}
+
+			/* targetiramo sve elemente koji sadrze title atribut i sadrze tocnu vrijednost koju trazimo, a ta vrijednost se moze nalaziti bilo gdje unutar cijele vrijednosti atributa */
+			[title*='odlomak'] {
+				color: green;
+			}
+
+			/* targetiramo sve elemente koji sadrze title atribut, a vrijednost atributa sadrzi vrijednost navedenu izmedu navodnih znakova i ona je odvojena od ostalih rijeci i izraza razmakom */
+			[title~='odlomak'] {
+				text-transform: uppercase;
+			}
+
+			/* targetiramo sve elemente koji sadrze title atribut, a njegova vrijendost pocinje vrijednoscu navedenom unutar navodnih znakova - tj. vrijednost se nalazi na pocetku vrijednosti atributa */
+			[title^='odlomak'] {
+				font-style: italic;
+			}
+
+			/* targetiramo sve elemente koji sadrze title atribut, a njegova vrijednost pocinje vrijednoscu navedenom unutar navodnih znakova i odvojena je od iducih rijeci/izraza znakom '-' */
+			[title|='odlomak'] {
+				font-family: 'Courier New', Courier, monospace;
+			}
+
+			/* targetiramo sve elemente koji sadrze title atribut te njegova vrijednost zavrsava vrijednoscu navedenom unutar navodnih znakova */
+			[title$='odlomak'] {
+				color: orange;
+			}
+		</style>
+	</head>
+	<body>
+		<h1 title="naslov stranice">Lorem ipsum dolor</h1>
+		<h2>Lorem ipsum</h2>
+		<h3>Lorem ipsum dolor sit amet</h3>
+		<p title="prvi odlomak">
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+			veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+			commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+			velit esse cillum dolore eu fugiat nulla pariatur. Ut enim ad minim
+			veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+			commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+			velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+			cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
+			est laborum.Excepteur sint occaecat cupidatat non proident, sunt in culpa
+			qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit
+			amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
+			labore et dolore magna aliqua.
+		</p>
+		<p title="odlomak-2">
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+			veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+			commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+			velit esse cillum dolore eu fugiat nulla pariatur. Ut enim ad minim
+			veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+			commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+			velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+			cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
+			est laborum.Excepteur sint occaecat cupidatat non proident, sunt in culpa
+			qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit
+			amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
+			labore et dolore magna aliqua.
+		</p>
+		<p title="odlomak 3">
+			Lorem ipsum dolor sit amet,
+			<strong
+				>consectetur <span title="adipisicing">adipisicing</span> elit</strong
+			>, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+			enim ad minim veniam, <em>quis nostrud exercitation ullamco</em> laboris
+			nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+			reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+			pariatur.
+		</p>
+		<p title="odlomakbla">
+			Lorem ipsum dolor sit amet,
+			<strong
+				>consectetur <span title="adipisicing">adipisicing</span> elit</strong
+			>, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+			enim ad minim veniam, <em>quis nostrud exercitation ullamco</em> laboris
+			nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+			reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+			pariatur.
+		</p>
+
+		<p>
+			Lorem ipsum dolor sit amet,
+			<strong
+				>consectetur <span title="adipisicing">adipisicing</span> elit</strong
+			>, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+			enim ad minim veniam, <em>quis nostrud exercitation ullamco</em> laboris
+			nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+			reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+			pariatur.
+		</p>
+	</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Pseudo klase2</title>
+
+		<style>
+			body {
+				color: rgb(40, 40, 40);
+				font-family: Verdana, Tahoma, Geneva, sans-serif;
+				font-size: 20px;
+			}
+
+			header {
+				color: red;
+			}
+
+			footer {
+				color: orange;
+			}
+
+			/* targetiramo p element koji je unutar svog parenta 1. element po redu, odnosno 1st child */
+			p:first-child {
+				text-decoration: underline wavy red;
+			}
+			/* targetiramo p element koji je unutar svog parenta zadnji element po redu, odnosno last child */
+			p:last-child {
+				font-size: 12px;
+			}
+			/* targetiramo p element koji je unutar svog parenta 2. element po redu, odnosno 2nd child */
+			p:nth-child(2) {
+				font-family: 'Courier New', Courier, monospace;
+			}
+			/* targetiramo p element koji je unutar svog parentane 1. element po redu vec 1. element tog tipa unutar parenta */
+			p:first-of-type {
+				font-weight: bold;
+			}
+
+			/* targetiramo p element koji je unutar svog parenta ne zadnji element po redu vec zadnji element tog tipa */
+			p:last-of-type {
+				text-transform: uppercase;
+			}
+
+			/* targetiramo p element koji je unutar svog parenta ne drugi element po redu vec 2. element po redu tog tipa */
+			p:nth-of-type(2) {
+				color: aqua;
+			}
+		</style>
+	</head>
+	<body>
+		<header>
+			<h1>Zaglavlje</h1>
+			<p>Odlomak</p>
+		</header>
+		<section>
+			<p>Odlomak</p>
+			<p>Odlomak</p>
+			<p>Odlomak</p>
+			<p>Odlomak</p>
+			<p>Odlomak</p>
+		</section>
+		<section>
+			<h1>Naslov sekcije</h1>
+			<p>Odlomak</p>
+			<p>Odlomak</p>
+			<p>Odlomak</p>
+			<p>Odlomak</p>
+			<p>Odlomak</p>
+		</section>
+		<footer>
+			<p>Odlomak</p>
+			<p>Odlomak</p>
+			<p>Odlomak</p>
+		</footer>
+	</body>
+</html>

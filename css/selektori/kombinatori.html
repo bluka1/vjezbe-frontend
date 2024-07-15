@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Kombinatori</title>
+
+		<style>
+			body {
+				color: rgb(40, 40, 40);
+				font-family: Verdana, Tahoma, Geneva, sans-serif;
+				font-size: 20px;
+			}
+
+			/* targetiramo p elemente koji na nasoj stranici slijede odmah, neposredno iza h1 elementa */
+			h1 + p {
+				font-weight: bold;
+			}
+
+			/* targetiramo sve p elemente koji se nalaze unutar section elementa, nebitno koliko duboko u strukturi */
+			section p {
+				color: green;
+			}
+
+			/* targetiramo sve p elemente koji su direktni potomci (1st level childovi) section elementa */
+			section > p {
+				text-decoration: line-through red;
+			}
+
+			/* targetiramo sve p elemente koji se nalaze unutar sekcija koje se nalaze unutar footer elementa (nebitno koliko duboko u hijerarhiji) */
+			footer section p {
+				font-family: 'Courier New', Courier, monospace;
+			}
+		</style>
+	</head>
+	<body>
+		<header>
+			<h1>Zaglavlje</h1>
+			<p>Odlomak</p>
+		</header>
+		<main>
+			<section>
+				<h1>Sekcija</h1>
+				<div>
+					<p>Odlomak</p>
+					<p>Odlomak</p>
+				</div>
+				<article>
+					<p>Odlomak</p>
+					<p>Odlomak</p>
+				</article>
+			</section>
+			<section>
+				<h1>Sekcija</h1>
+				<p>Odlomak</p>
+				<p>Odlomak</p>
+				<p>Odlomak</p>
+				<p>Odlomak</p>
+				<p>Odlomak</p>
+			</section>
+			<article>
+				<h1>Objava</h1>
+				<p>Odlomak</p>
+				<p>Odlomak</p>
+				<p>Odlomak</p>
+				<p>Odlomak</p>
+				<p>Odlomak</p>
+			</article>
+		</main>
+
+		<footer>
+			<h1>Podnožje</h1>
+			<section>
+				<h1>Sekcija</h1>
+				<p>Odlomak</p>
+				<p>Odlomak</p>
+				<p>Odlomak</p>
+				<p>Odlomak</p>
+				<p>Odlomak</p>
+			</section>
+			<section>
+				<h1>Sekcija</h1>
+				<p>Odlomak</p>
+				<p>Odlomak</p>
+				<p>Odlomak</p>
+				<p>Odlomak</p>
+				<p>Odlomak</p>
+			</section>
+		</footer>
+	</body>
+</html>
