@@ -1,0 +1,30 @@
+body {
+	background-color: #ddd;
+	color: rgb(40, 40, 40);
+	font-family: Verdana, Tahoma, Geneva, sans-serif;
+	font-size: 16px;
+}
+
+header {
+	background-color: green;
+}
+
+h1 {
+	background-color: pink;
+}
+
+p {
+	background-color: #eee;
+}
+
+nav {
+	background-color: lightyellow;
+}
+
+main {
+	background-color: lightblue;
+}
+
+footer {
+	background-color: rgb(155, 0, 0);
+}
