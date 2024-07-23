@@ -1,0 +1,52 @@
+body {
+	margin: 0;
+}
+
+div {
+	height: 100px;
+	position: absolute;
+	width: 100px;
+}
+
+/*
+***** z-index *****
+
+- da bismo mogli koristiti z-index, element mora imati position svojstvo postavljeno na relative ili absolute
+*/
+
+.box1 {
+	background-color: rgb(88, 177, 147);
+	z-index: 5;
+}
+.box2 {
+	background-color: orange;
+	left: 50px;
+	top: 50px;
+	z-index: 4;
+}
+.box3 {
+	background-color: pink;
+	left: 100px;
+	top: 100px;
+	z-index: 3;
+}
+.box4 {
+	background-color: green;
+	left: 150px;
+	top: 150px;
+	z-index: 2;
+}
+.box5 {
+	background-color: brown;
+	height: 300px;
+	width: 300px;
+	z-index: 1;
+}
+
+/* .box6 {
+	background-color: black;
+	position: fixed;
+	top: 30px;
+	left: 30px;
+	z-index: 100;
+} */

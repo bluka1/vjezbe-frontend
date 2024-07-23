@@ -1,0 +1,16 @@
+div {
+	height: 200px;
+	width: 200px;
+}
+.box1 {
+	background-color: rgb(8, 100, 100);
+	/* position: static; */
+}
+
+.box2 {
+	background-color: rgb(235, 150, 47);
+	/* position: static; */
+	left: 200px;
+	position: relative;
+	bottom: 200px;
+}

@@ -1,0 +1,15 @@
+div {
+	height: 200px;
+	width: 200px;
+}
+
+.box1 {
+	background-color: rgb(21, 135, 97);
+}
+
+.box2 {
+	background-color: orange;
+	bottom: 100px;
+	position: fixed;
+	right: 100px;
+}
