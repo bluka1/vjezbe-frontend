@@ -1,0 +1,31 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	color: rgb(40, 40, 40);
+	font-family: Verdana, Tahoma, Geneva, sans-serif;
+	font-size: 16px;
+	margin: 0;
+	padding: 0;
+}
+
+ul {
+	border: 1px solid grey;
+	list-style-type: none;
+	padding: 16px;
+}
+
+li {
+	background-color: lightyellow;
+	display: inline-block;
+	width: 18%;
+}
+
+p {
+	border: 1px solid grey;
+	display: inline-block;
+	margin: 0;
+	margin-left: -4px;
+	width: 24%;
+}

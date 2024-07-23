@@ -1,0 +1,41 @@
+body {
+	color: rgb(40, 40, 40);
+	font-family: Verdana, Tahoma, Geneva, sans-serif;
+	font-size: 16px;
+	margin: 8px;
+	padding: 0;
+}
+
+h1 {
+	text-align: center;
+}
+
+p {
+	background-color: orange;
+}
+
+em {
+	background-color: violet;
+}
+
+.inline {
+	display: inline;
+}
+
+.inline-block {
+	display: inline-block;
+}
+
+.box {
+	height: 100px;
+	margin: 20px;
+	width: 300px;
+}
+
+.none {
+	display: none;
+}
+
+.block {
+	display: block;
+}
