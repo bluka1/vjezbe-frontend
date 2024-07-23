@@ -1,0 +1,36 @@
+body {
+	color: rgb(40, 40, 40);
+	font-family: Verdana, Tahoma, Geneva, sans-serif;
+	font-size: 16px;
+	margin: 0;
+	padding: 0;
+}
+
+img {
+	border: 1px solid black;
+	display: block;
+	margin: 20px auto;
+	padding: 20px;
+	width: 25%;
+}
+
+/*
+img {
+  border: 1px solid black;
+  display: block;
+  margin: auto;
+  margin-top: 20px;
+  padding: 20px;
+  width: 25%;
+}
+*/
+
+/*
+img {
+  border: 1px solid black;
+  display: block;
+  margin: 20px auto;
+  padding: 20px;
+  width: 25%;
+}
+*/
