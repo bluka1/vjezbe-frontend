@@ -1,0 +1,47 @@
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	color: rgb(40, 40, 40);
+	font-family: Verdana, Tahoma, Geneva, sans-serif;
+	margin: 0;
+	padding: 0;
+}
+
+header,
+footer {
+	background-color: lightgray;
+	height: 10vh;
+	padding: 16px;
+}
+
+main {
+	display: flex;
+	gap: 16px;
+	justify-content: space-between;
+	padding: 16px;
+	min-height: 80vh;
+}
+
+section,
+article,
+aside {
+	border: 1px solid lightgray;
+	padding: 16px;
+}
+
+section {
+	display: flex;
+	flex-wrap: wrap;
+	flex-basis: 70%;
+	gap: 8px;
+	justify-content: space-between;
+}
+
+aside {
+	flex-basis: 30%;
+}
+
+article {
+	flex-basis: 48%;
+}

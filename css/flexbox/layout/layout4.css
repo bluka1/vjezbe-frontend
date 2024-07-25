@@ -1,0 +1,33 @@
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	color: rgb(40, 40, 40);
+	font-family: Verdana, Tahoma, Geneva, sans-serif;
+	margin: 0;
+	padding: 0;
+}
+
+.wrapper {
+	border: 1px dashed black;
+	padding: 16px;
+}
+
+.wrapper > div {
+	background-color: lightgray;
+	border: 1px solid black;
+	height: 80px;
+	margin: 1%;
+	padding: 16px 24px;
+	text-align: center;
+}
+
+.flex-item {
+	flex: 1 1 31%;
+}
+
+.flex-container {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
