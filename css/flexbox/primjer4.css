@@ -16,6 +16,7 @@
 
 .flex-container {
 	display: flex;
+	align-items: center;
 }
 
 .flex-item {
@@ -33,4 +34,5 @@
 	/* flex-shrink: 3; */
 	/* flex-basis: 600px; */
 	flex: 1 1 600px;
+	align-self: flex-end;
 }
