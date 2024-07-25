@@ -1,0 +1,48 @@
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	color: rgb(40, 40, 40);
+	font-family: Verdana, Tahoma, Geneva, sans-serif;
+	margin: 0;
+	padding: 0;
+}
+
+/* primjer 1 */
+/* .wrapper {
+	border: 1px dashed black;
+	padding: 20px;
+}
+
+.flex-container {
+	display: flex;
+}
+
+.flex-item {
+	background-color: lightgray;
+	border: 1px solid black;
+	margin: 16px;
+	padding: 16px 24px;
+	text-align: center;
+	width: 150px;
+} */
+
+/* primjer 2 */
+.wrapper {
+	border: 1px dashed black;
+	padding: 20px;
+}
+
+.flex-container {
+	display: flex;
+	flex-direction: column;
+}
+
+.flex-item {
+	background-color: lightgray;
+	border: 1px solid black;
+	margin: 16px;
+	padding: 16px 24px;
+	text-align: center;
+	width: 150px;
+}
