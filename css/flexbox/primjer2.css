@@ -1,0 +1,31 @@
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	color: rgb(40, 40, 40);
+	font-family: Verdana, Tahoma, Geneva, sans-serif;
+	margin: 0;
+	padding: 0;
+}
+
+.wrapper {
+	border: 1px dashed black;
+	padding: 20px;
+}
+
+.flex-container {
+	display: flex;
+	/* flex-direction: row; */ /* row - default value */
+	/* flex-wrap: wrap; */ /* nowrap - default value */
+	/* flex-flow: flex-direction flex-wrap*/
+	flex-flow: row wrap;
+}
+
+.flex-item {
+	background-color: lightgray;
+	border: 1px solid black;
+	margin: 16px;
+	padding: 16px 24px;
+	text-align: center;
+	width: 30%;
+}

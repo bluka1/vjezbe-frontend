@@ -12,6 +12,10 @@ Ovo je repozitorij gdje će biti sve vježbe koje ćemo obrađivati tijekom pred
 - link na platformu za vjezbu HTML-a i CSS-a:
   [iCodeThis](https://icodethis.com/roadmap)
 
+- Flexbox guide - [Flexbox Guide](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
+
+- Grid guide - [Grid Guide](https://css-tricks.com/snippets/css/complete-guide-grid/)
+
 ### CSS games
 
 - flexbox and grid: [CodingFantasy](https://codingfantasy.com/games)
