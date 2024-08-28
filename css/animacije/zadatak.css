@@ -1,0 +1,156 @@
+* {
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: Tahoma, sans-serif;
+	font-size: 16px;
+	color: #333;
+}
+h1 {
+	text-align: center;
+}
+
+.wrapper {
+	text-align: center;
+}
+
+.wrapper div {
+	background-color: #f93;
+	border: 4px solid #333;
+	border-radius: 100%;
+	display: inline-block;
+	font-size: 2em;
+	line-height: 90px;
+	width: 100px;
+	height: 100px;
+	margin: 1em;
+	text-align: center;
+	position: relative;
+}
+
+@keyframes animacija1 {
+	0% {
+	}
+	50% {
+		background-color: red;
+		transform: scale(1.5);
+	}
+	100% {
+	}
+}
+
+.wrapper div:nth-of-type(1) {
+	animation: animacija1 2s ease-in-out infinite;
+}
+
+@keyframes animacija2 {
+	0% {
+		top: 0;
+	}
+	50% {
+		top: 300px;
+		transform: rotate(360deg) scale(0.7);
+	}
+	100% {
+		top: 0;
+	}
+}
+
+.wrapper div:nth-of-type(2) {
+	animation: animacija2 2s ease-in-out infinite;
+}
+
+@keyframes animacija3 {
+	0% {
+	}
+	50% {
+		border-radius: 0;
+		transform: rotate(180deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+.wrapper div:nth-of-type(3) {
+	animation: animacija3 4s linear infinite;
+}
+
+@keyframes animacija4 {
+	0% {
+		top: 0;
+	}
+	50% {
+		top: 30px;
+	}
+	100% {
+		top: 0;
+	}
+}
+
+.wrapper div:nth-of-type(4) {
+	animation: animacija4 0.5s ease-in-out infinite;
+}
+
+.wrapper div:nth-of-type(4):hover {
+	animation-play-state: paused;
+}
+
+@keyframes animacija5 {
+	0% {
+		top: 0;
+	}
+	25% {
+		background-color: orange;
+		top: 400px;
+		transform: rotate(0deg);
+	}
+	50% {
+		background-color: red;
+		top: 400px;
+		transform: rotate(360deg);
+	}
+	75% {
+		background-color: orange;
+		top: 400px;
+		transform: rotate(0deg);
+	}
+	100% {
+		top: 0;
+	}
+}
+
+.wrapper div:nth-of-type(5) {
+	animation: animacija5 4s ease-in-out infinite;
+}
+
+@keyframes animacija6 {
+	0% {
+		transform: scale(1);
+	}
+	50% {
+		transform: scale(1.5);
+	}
+	100% {
+		transform: scale(1);
+	}
+}
+
+/*
+solution 1
+
+.wrapper div:nth-of-type(6) {
+	animation: animacija6 1s ease-in-out infinite paused;
+}
+
+.wrapper div:nth-of-type(6):hover {
+	animation-play-state: running;
+}
+
+*/
+/* solution 2 */
+.wrapper div:nth-of-type(6):hover {
+	animation: animacija6 1s ease-in-out infinite;
+}
