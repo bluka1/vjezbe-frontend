@@ -1,0 +1,24 @@
+$boja1: green;
+$pozadinska-boja: whitesmoke;
+$boja-texta: #333;
+$font-linkova: 'Courier New', Courier, monospace;
+
+body {
+	background-color: $pozadinska-boja;
+	color: $boja-texta;
+	font-family: sans-serif;
+}
+
+h1 {
+	background-color: greenyellow;
+	color: $boja1;
+}
+
+a {
+	font-family: $font-linkova;
+}
+
+article {
+	border: 2px solid $boja1;
+	margin: 20px;
+}

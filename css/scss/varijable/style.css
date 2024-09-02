@@ -1,0 +1,19 @@
+body {
+  background-color: whitesmoke;
+  color: #333;
+  font-family: sans-serif;
+}
+
+h1 {
+  background-color: greenyellow;
+  color: green;
+}
+
+a {
+  font-family: "Courier New", Courier, monospace;
+}
+
+article {
+  border: 2px solid green;
+  margin: 20px;
+}/*# sourceMappingURL=style.css.map */
