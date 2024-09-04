@@ -1,0 +1,26 @@
+$boja1: whitesmoke;
+$boja2: #333;
+$font1: sans-serif;
+
+body {
+	background-color: $boja1;
+	color: $boja2;
+	font-family: $font1;
+}
+
+.borders {
+	border: 2px solid $boja2;
+}
+
+// placeholder selectors
+%spaces {
+	margin: 20px;
+	padding: 20px;
+}
+
+header,
+footer,
+article {
+	@extend .borders;
+	@extend %spaces;
+}

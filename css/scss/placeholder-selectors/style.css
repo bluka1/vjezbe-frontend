@@ -1,0 +1,18 @@
+body {
+  background-color: whitesmoke;
+  color: #333;
+  font-family: sans-serif;
+}
+
+.borders, header,
+footer,
+article {
+  border: 2px solid #333;
+}
+
+header,
+footer,
+article {
+  margin: 20px;
+  padding: 20px;
+}/*# sourceMappingURL=style.css.map */
