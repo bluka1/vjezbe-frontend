@@ -1,0 +1,29 @@
+$boja1: whitesmoke;
+$boja2: #333;
+$boja3: darkred;
+$font1: sans-serif;
+
+@mixin space($m, $p) {
+	margin: $m;
+	padding: $p;
+}
+
+body {
+	background-color: $boja1;
+	color: $boja2;
+	font-family: $font1;
+	@include space(0, 0);
+}
+
+div {
+	background-color: $boja3;
+	height: 20px;
+	@include space(0 0 20px 0, 0);
+}
+
+@for $i from 1 through 8 {
+	$w: percentage(1 / $i); // calc bismo koristili u obicnom cssu
+	.col-#{$i} {
+		width: $w;
+	}
+}
