@@ -1,0 +1,34 @@
+$boja1: whitesmoke;
+$boja2: #333;
+$boja3: darkred;
+$font1: sans-serif;
+
+@mixin space($m, $p) {
+	margin: $m;
+	padding: $p;
+}
+
+body {
+	background-color: $boja1;
+	color: $boja2;
+	font-family: $font1;
+	@include space(0, 0);
+	content: 'hello';
+}
+
+div {
+	background-color: $boja2;
+	color: $boja1;
+	@include space(0 0 20px 0, 20px);
+}
+
+$num: 8;
+
+@while $num > 0 {
+	.col-#{$num} {
+		&:before {
+			content: '#{$num}';
+		}
+	}
+	$num: $num - 1;
+}
