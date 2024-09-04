@@ -1,0 +1,35 @@
+@import './general';
+@import './mixins';
+
+* {
+	box-sizing: border-box;
+}
+$boja1: whitesmoke;
+$boja2: #333;
+$boja3: darkred;
+$font1: sans-serif;
+
+div {
+	background-color: $boja1;
+	border: 2px solid $boja2;
+	text-align: center;
+	padding: 10px;
+}
+
+.flex-container {
+	@include flex;
+	height: 200px;
+}
+
+.flex-item {
+	flex-basis: 22%;
+
+	@include media-query('laptop', max) {
+		flex-basis: 43%;
+		flex-grow: 1;
+	}
+
+	@include media-query('mobile', max) {
+		flex-basis: 100%;
+	}
+}

@@ -1,0 +1,21 @@
+@import './base/index';
+@import './abstracts/mixins';
+
+body {
+	color: $boja2;
+	font-family: $sans-serif;
+}
+
+.menu {
+	background-color: $boja1;
+	@include space(20px, 20px);
+}
+
+ul {
+	list-style-type: none;
+	li {
+		display: inline-block;
+	}
+}
+
+@include link($boja4, $boja2, $boja3);

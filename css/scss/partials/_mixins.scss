@@ -1,0 +1,27 @@
+@mixin flex {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	gap: 10px;
+}
+
+$breakpoints: (
+	'mobile': 480px,
+	'tablet': 768px,
+	'laptop': 1024px,
+	'desktop': 1200px,
+);
+
+@mixin media-query($width, $type) {
+	@if map_has_key($breakpoints, $width) {
+		$width: map-get($breakpoints, $width);
+
+		@if $type == max {
+			$width: $width - 1;
+		}
+
+		@media (#{$type}-width: $width) {
+			@content;
+		}
+	}
+}

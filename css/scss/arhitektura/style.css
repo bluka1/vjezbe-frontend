@@ -1,0 +1,43 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  color: #333;
+  font-family: Verdana, Tahoma, sans-serif;
+}
+
+.menu {
+  background-color: whitesmoke;
+  margin: 20px;
+  padding: 20px;
+}
+
+ul {
+  list-style-type: none;
+}
+ul li {
+  display: inline-block;
+}
+
+a {
+  margin: 0;
+  padding: 10px 20px;
+  color: orange;
+  font-weight: bold;
+  text-decoration: none;
+}
+a:hover {
+  color: #333;
+}
+a:active {
+  color: darkred;
+}/*# sourceMappingURL=style.css.map */

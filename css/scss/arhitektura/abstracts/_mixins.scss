@@ -1,0 +1,21 @@
+@mixin space($m, $p) {
+	margin: $m;
+	padding: $p;
+}
+
+@mixin link($bojalinka, $hoverboja, $activeboja) {
+	a {
+		@include space(0, 10px 20px);
+		color: $bojalinka;
+		font-weight: bold;
+		text-decoration: none;
+
+		&:hover {
+			color: $hoverboja;
+		}
+
+		&:active {
+			color: $activeboja;
+		}
+	}
+}
