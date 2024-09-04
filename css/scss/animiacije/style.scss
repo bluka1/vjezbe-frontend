@@ -1,0 +1,105 @@
+$boja1: darkred;
+$boja2: green;
+
+@mixin keyframes($an) {
+	@keyframes #{$an} {
+		@content;
+	}
+}
+
+@mixin animation($definicija) {
+	animation: $definicija;
+}
+
+@mixin transition($definicija...) {
+	transition: $definicija;
+}
+
+@mixin stilovi($selektor, $width, $height) {
+	#{$selektor} {
+		background-color: $boja1;
+		height: $height;
+		width: $width;
+	}
+}
+
+@mixin aspect-ratio($selector, $ratio) {
+	position: relative;
+
+	&::before {
+		content: '';
+		display: block;
+		padding-top: calc(100% / #{$ratio});
+	}
+
+	#{$selector} {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+	}
+}
+
+body {
+	font-family: sans-serif;
+	margin: 0;
+}
+
+div {
+	background-color: $boja2;
+	margin: 20px auto;
+	padding: 16px;
+	width: 25%;
+
+	&:first-child {
+		@include animation(fade 2s ease-in-out infinite);
+	}
+
+	&:nth-child(2) {
+		@include animation(fade 3s ease-in-out infinite);
+	}
+
+	&:nth-child(3) {
+		@include animation(fade 1s ease-in-out infinite);
+	}
+
+	&:nth-child(4) {
+		@include transition(background-color 1s ease);
+		&:hover {
+			background-color: $boja1;
+		}
+	}
+	&:nth-child(5) {
+		@include transition(width 1s ease);
+		&:hover {
+			width: 80%;
+		}
+	}
+
+	&:nth-child(6) {
+		@include transition(transform 1s ease);
+		&:hover {
+			transform: translateX(100px);
+		}
+	}
+}
+
+@include stilovi('div:first-child', 100px, 200px);
+
+@include keyframes(fade) {
+	0% {
+		opacity: 1;
+	}
+	50% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+.aspect-ratio-container {
+	background: pink;
+	@include aspect-ratio('.content', 16/1);
+}
