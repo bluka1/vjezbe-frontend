@@ -1,0 +1,51 @@
+body {
+  background-color: whitesmoke;
+  color: #333;
+  font-family: sans-serif;
+}
+
+header,
+section,
+article,
+footer {
+  border: 2px solid #333;
+  padding: 20px;
+}
+
+p {
+  color: whitesmoke;
+  background-color: darkred;
+  padding: 20px;
+}
+
+section {
+  margin: 20px auto;
+  width: 80%;
+}
+section article {
+  margin: 20px;
+  border-radius: 20px;
+}
+section article:last-of-type {
+  margin: 0;
+  border-radius: 0 20px;
+}
+
+section .odlomak {
+  border: 10px dotted whitesmoke;
+}
+
+footer {
+  margin: 30px 0 30px 60px;
+}
+
+@media (max-width: 599px) {
+  body {
+    background-color: yellow;
+  }
+}
+@media (min-width: 600px) and (max-width: 1023px) {
+  body {
+    background-color: purple;
+  }
+}/*# sourceMappingURL=style.css.map */

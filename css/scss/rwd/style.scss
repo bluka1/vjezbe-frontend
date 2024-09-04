@@ -1,0 +1,96 @@
+$boja1: whitesmoke;
+$boja2: purple;
+$boja3: yellow;
+$boja4: darkred;
+$boja5: #333;
+$font1: sans-serif;
+$font2: Courier, Monospace;
+
+@mixin margins($m...) {
+	margin: $m;
+}
+
+@mixin border-r($r: 20px) {
+	border-radius: $r;
+}
+
+@mixin odlomci($b) {
+	p {
+		color: $b;
+		@content;
+	}
+}
+
+@mixin sadrzaj {
+	section {
+		@content;
+	}
+}
+// breakpoint je postavljen na 599px radi jednostavnosti testiranja - inace treba biti 478px
+@mixin mobilni() {
+	@media (max-width: 599px) {
+		@content;
+	}
+}
+
+@mixin tablet() {
+	@media (min-width: 600px) and (max-width: 1023px) {
+		@content;
+	}
+}
+
+body {
+	background-color: $boja1;
+	color: $boja5;
+	font-family: $font1;
+}
+
+header,
+section,
+article,
+footer {
+	border: 2px solid $boja5;
+	padding: 20px;
+}
+
+@include odlomci($boja1) {
+	background-color: $boja4;
+	padding: 20px;
+}
+
+section {
+	@include margins(20px auto);
+	width: 80%;
+
+	article {
+		@include margins(20px);
+		@include border-r;
+
+		&:last-of-type {
+			@include margins(0);
+			@include border-r(0 20px);
+		}
+	}
+}
+
+@include sadrzaj {
+	.odlomak {
+		border: 10px dotted $boja1;
+	}
+}
+
+footer {
+	@include margins(30px 0 30px 60px);
+}
+
+@include mobilni {
+	body {
+		background-color: $boja3;
+	}
+}
+
+@include tablet {
+	body {
+		background-color: $boja2;
+	}
+}
