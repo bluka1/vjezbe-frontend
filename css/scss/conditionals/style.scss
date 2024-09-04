@@ -1,0 +1,31 @@
+$boja1: whitesmoke;
+$boja2: #333;
+$font1: sans-serif;
+
+@mixin theme($light-theme: true) {
+	@if $light-theme == true {
+		background-color: $boja1;
+		color: $boja2;
+	} @else {
+		background-color: $boja2;
+		color: $boja1;
+	}
+}
+
+@mixin space($m, $p) {
+	margin: $m;
+	padding: $p;
+}
+
+body {
+	background-color: $boja1;
+	color: $boja2;
+	font-family: $font1;
+}
+
+header,
+footer,
+article {
+	@include theme(false);
+	@include space(20px, 20px);
+}

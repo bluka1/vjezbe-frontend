@@ -1,0 +1,14 @@
+body {
+  background-color: whitesmoke;
+  color: #333;
+  font-family: sans-serif;
+}
+
+header,
+footer,
+article {
+  background-color: #333;
+  color: whitesmoke;
+  margin: 20px;
+  padding: 20px;
+}/*# sourceMappingURL=style.css.map */
