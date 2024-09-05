@@ -1,0 +1,60 @@
+@import './abstract/variables';
+@import './abstract/mixins';
+@import './base/typography';
+@import './base/reset';
+
+body {
+	color: $tamna-boja;
+	font-family: $sans-serif;
+	font-size: $font-size;
+	font-weight: normal;
+}
+
+h1,
+h2 {
+	@include align-element(block, 20px auto, center);
+}
+
+%headfoot {
+	background-color: $tamna-pozadina;
+	color: $svijetla-boja;
+	padding: 30px;
+}
+
+header {
+	@extend %headfoot;
+	p {
+		@include align-element(null, 40px 0, center);
+	}
+}
+
+main {
+	@include flex-container;
+	gap: 20px;
+	padding: 30px;
+
+	h1 {
+		flex-basis: 100%;
+	}
+
+	section {
+		border: 2px solid $tamna-boja;
+		padding: 20px;
+		flex-basis: 30%;
+	}
+}
+
+footer {
+	@extend %headfoot;
+	@include flex-container;
+
+	h1 {
+		flex-basis: 100%;
+	}
+
+	section {
+		flex-basis: 45%;
+	}
+}
+
+@include link($svijetla-boja, $crvena-boja, $siva-boja, $narancasta-boja);

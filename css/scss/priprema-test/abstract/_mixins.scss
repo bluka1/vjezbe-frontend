@@ -1,0 +1,31 @@
+@mixin align-element($display, $margin, $text-align) {
+	display: $display;
+	margin: $margin;
+	text-align: $text-align;
+}
+
+@mixin link($boja-linka, $boja-pozadine, $hover-boja, $active-boja) {
+	a {
+		background-color: $boja-pozadine;
+		color: $boja-linka;
+		padding: 12px 48px;
+		text-decoration: none;
+		width: 200px;
+		@include align-element(block, 20px auto, center);
+		&:hover {
+			background-color: $hover-boja;
+			color: $narancasta-boja;
+		}
+
+		&:active {
+			background-color: $siva-boja;
+			color: $narancasta-boja;
+		}
+	}
+}
+
+@mixin flex-container {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
