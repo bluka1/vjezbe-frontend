@@ -30,3 +30,5 @@ Ovo je repozitorij gdje će biti sve vježbe koje ćemo obrađivati tijekom pred
 
 - images - [images](https://predavacialgebra-my.sharepoint.com/:f:/g/personal/luka_batarelo_predavaci_algebra_hr/EiRozIzaSTZMmZE0VjfRF_wB9ekjCtw8Cq97eJdHFxlqkA?e=OnC6og)
 - multimedia - [multimedia](https://predavacialgebra-my.sharepoint.com/:f:/g/personal/luka_batarelo_predavaci_algebra_hr/EhVycROcIqlCmgsZ5PJUSAgB2D3KHDt9DRCqzIN9i8yDEw?e=E3o2RJ)
+
+### Javascript materijali
