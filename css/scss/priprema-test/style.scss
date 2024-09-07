@@ -26,6 +26,11 @@ header {
 	p {
 		@include align-element(null, 40px 0, center);
 	}
+        ul {
+                @include flex-container;
+                justify-content: center;
+                column-gap: 10px;
+        }
 }
 
 main {
