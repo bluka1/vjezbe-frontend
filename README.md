@@ -32,3 +32,10 @@ Ovo je repozitorij gdje će biti sve vježbe koje ćemo obrađivati tijekom pred
 - multimedia - [multimedia](https://predavacialgebra-my.sharepoint.com/:f:/g/personal/luka_batarelo_predavaci_algebra_hr/EhVycROcIqlCmgsZ5PJUSAgB2D3KHDt9DRCqzIN9i8yDEw?e=E3o2RJ)
 
 ### Javascript materijali
+
+- Prettier dokumentacija - [link](https://prettier.io/docs/en/configuration)
+- JS rezervirane kljucne rijeci - [link](https://www.w3schools.com/js/js_reserved.asp)
+
+#### Knjige
+
+- Eloquent Javascript - [link](https://eloquentjavascript.net/)
