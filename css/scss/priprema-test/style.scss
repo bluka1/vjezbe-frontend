@@ -26,6 +26,11 @@ header {
 	p {
 		@include align-element(null, 40px 0, center);
 	}
+        ul {
+                @include flex-container;
+                justify-content: center;
+                column-gap: 10px;
+        }
 }
 
 main {
@@ -38,7 +43,7 @@ main {
 	}
 
 	section {
-		border: 2px solid $tamna-boja;
+		border: 2px solid $border-boja;
 		padding: 20px;
 		flex-basis: 30%;
 	}
