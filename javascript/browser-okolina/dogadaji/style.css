@@ -1,0 +1,49 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h3 {
+  margin: 20px auto;
+  text-align: center;
+}
+
+form {
+  border: 1px solid gray;
+  border-radius: 10px;
+  margin: 20px auto;
+  padding: 20px;
+  width: 50%;
+}
+
+form label {
+  display: block;
+  margin: 4px;
+}
+
+form label input {
+  border: 1px solid gray;
+  border-radius: 10px;
+  padding: 10px;
+  width: 50%;
+}
+
+div {
+  margin: 20px auto;
+}
+
+button {
+  background-color: transparent;
+  border: 1px solid rgb(4, 4, 99);
+  border-radius: 10px;
+  cursor: pointer;
+  padding: 10px 20px;
+}
+
+button:hover {
+  background-color: lightgray;
+}
