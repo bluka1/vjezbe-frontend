@@ -35,6 +35,8 @@ Ovo je repozitorij gdje će biti sve vježbe koje ćemo obrađivati tijekom pred
 
 - Prettier dokumentacija - [link](https://prettier.io/docs/en/configuration)
 - JS rezervirane kljucne rijeci - [link](https://www.w3schools.com/js/js_reserved.asp)
+- 30 days of JS - [link](https://github.com/Asabeneh/30-Days-Of-JavaScript)
+- 30 projects with vanilla JS - [link](https://javascript30.com/)
 
 #### Knjige
 
