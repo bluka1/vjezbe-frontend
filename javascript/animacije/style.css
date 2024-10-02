@@ -1,0 +1,15 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.el {
+  border: 1px solid black;
+  background-color: bisque;
+  height: 100px;
+  margin: 150px;
+  width: 100px;
+}
