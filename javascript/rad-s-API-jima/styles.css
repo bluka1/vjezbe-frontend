@@ -1,0 +1,49 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: sans-serif;
+  font-size: 16px;
+}
+
+h1 {
+  margin: 20px 0;
+  text-align: center;
+}
+
+#lista-pasa {
+  display: flex;
+  flex-wrap: wrap;
+  list-style-type: none;
+}
+
+.item {
+  background-color: whitesmoke;
+  border: 1px solid gray;
+  border-radius: 8px;
+  color: black;
+  margin: 8px auto;
+  padding: 20px;
+  width: 30%;
+}
+
+.item p {
+  margin: 8px 0;
+}
+
+@media (max-width: 478px) {
+  .item {
+    width: 95%;
+  }
+}
+
+@media (max-width: 1024px) {
+  .item {
+    width: 45%;
+  }
+}
