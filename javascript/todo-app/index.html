@@ -8,11 +8,34 @@
   <body>
     <header class="header">
       <h1>My tasks</h1>
-      <input placeholder="Add todo" autofocus />
-      <button class="addButton">Add</button>
+      <nav class="nav">
+        <label for="all" class="active">
+          All
+          <input type="radio" id="all" name="filter" value="all" />
+        </label>
+        <label for="active">
+          Active
+          <input type="radio" id="active" name="filter" value="active" />
+        </label>
+        <label for="completed">
+          Completed
+          <input type="radio" id="completed" name="filter" value="completed" />
+        </label>
+      </nav>
     </header>
     <main>
-      <ul class="todoList"></ul>
+      <div class="wrapper">
+        <div class="add-todo-input">
+          <input id="newTodoText" placeholder="Add todo..." autofocus />
+          <button class="addButton">Add</button>
+        </div>
+        <ul class="todoList"></ul>
+      </div>
     </main>
+    <div class="clearWrapper">
+      <button class="clearCompleted">Clear completed</button>
+    </div>
+
+    <script src="script.js"></script>
   </body>
 </html>
