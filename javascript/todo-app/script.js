@@ -41,6 +41,15 @@
     showAllTodos();
   }
 
+  function removeTodo(id) {
+    for (let i = 0; i < todos.length; i++)
+      if (todos[i].id == id) {
+        todos.splice(i, 1);
+        break;
+      }
+    showAllTodos();
+  }
+
   function showAllTodos() {
     listContainer.innerHTML = `
       ${todos
@@ -52,7 +61,7 @@
             todo.id
           }" ${todo.done ? "checked" : ""} />
           <p>${todo.text}</p>
-          <button class="removeTodo">
+          <button class="removeTodo" id="removeTodo_${todo.id}">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 16 16"
@@ -69,6 +78,9 @@
     todos.forEach((todo) => {
       document.getElementById("checkbox_" + todo.id).onclick = () => {
         toggleDone(todo.id);
+      };
+      document.getElementById("removeTodo_" + todo.id).onclick = () => {
+        removeTodo(todo.id);
       };
     });
   }
