@@ -152,6 +152,8 @@ header h1 {
   text-decoration: line-through;
 }
 
-path {
+p,
+path,
+svg {
   pointer-events: none;
 }
