@@ -19,11 +19,6 @@
    * @constructor
    * @param {string} text - Todo text
    */
-  function Todo(todoText) {
-    this.text = todoText;
-    this.done = false;
-    this.id = Math.random().toFixed(7);
-  }
 
   function addTodoHandler() {
     addItem();
