@@ -15,11 +15,6 @@
   const activeTodosNavButton = document.getElementById("active");
   const completedTodosNavButton = document.getElementById("completed");
 
-  /**
-   * @constructor
-   * @param {string} text - Todo text
-   */
-
   function addTodoHandler() {
     addItem();
   }
