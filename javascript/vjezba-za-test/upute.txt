@@ -1,0 +1,19 @@
+VJEZBA ZA TEST
+
+Aplikacija treba dohvacati podatke s API-ja prema trazenom pojmu.
+Izgled nije bitan. Aplikacija mora sadrzavati input field (text) i/ili listu rezultata.
+
+API: 'https://dummyjson.com/products/search?q=phone'
+Docs: https://dummyjson.com/docs/products
+
+ZAHTJEVI:
+- na svako novo upisano slovo radi se novi request i dohvacaju se novi podaci
+- potrebno je prikazati podatke u sljedecem formatu: brand - title
+- ako nema podataka po pretrazenom pojmu, aplikacija mora prikazati neku smislenu poruku
+- tijekom dohvacanja podataka, aplikacija mora dati do znanja korisniku da se dohvacaju podaci(npr. moze pisati Loading...)
+
+- DODATNO:
+  - export minificiranog js filea
+
+- OPCIONALNO:
+  - koristenje npm paketa koji bi vam mogli koristiti
