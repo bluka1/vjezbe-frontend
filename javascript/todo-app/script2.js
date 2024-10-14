@@ -1,12 +1,14 @@
 /**
  * Pokrece Todo aplikaciju.
  */
+
 (function () {
   "use strict";
 
   let filter = "all";
+  const TODOS_LOCAL_STORAGE = "todos";
 
-  let todos = [];
+  let todos = JSON.parse(localStorage.getItem(TODOS_LOCAL_STORAGE)) || [];
 
   const listContainer = document.querySelector(".todoList");
   const addTodoButton = document.querySelector(".addButton");
@@ -27,16 +29,19 @@
     this.id = Math.random().toFixed(7);
   }
 
+  function updateLocalStorage(value) {
+    localStorage.setItem(TODOS_LOCAL_STORAGE, JSON.stringify(value));
+  }
+
   function addTodoHandler() {
     const todoText = newTodoTextInput.value.trim();
     if (!todoText) return;
     const todo = new Todo(todoText);
     newTodoTextInput.value = "";
     todos.push(todo);
+    updateLocalStorage(todos);
     render(todos);
   }
-
-  listContainer.addEventListener("click", handleClick);
 
   function handleClick(event) {
     const target = event.target;
@@ -48,19 +53,21 @@
       todos = todos.filter((todo) => {
         return todo.id !== dataId;
       });
+      updateLocalStorage(todos);
     } else if (isCheckbox) {
       todos.forEach((todo) => {
         if (todo.id === dataId) {
           todo.done = !todo.done;
         }
       });
+      updateLocalStorage(todos);
     }
 
     render(todos);
   }
 
-  function render(todos) {
-    listContainer.innerHTML = `${todos
+  function render(todos, listElement = listContainer) {
+    listElement.innerHTML = `${todos
       .map(
         (todo) =>
           `<li class="todoItem ${todo.done ? "done" : null}" data-id=${todo.id}>
@@ -133,6 +140,7 @@
    */
   function removeCompletedTodosHandler() {
     todos = todos.filter((todo) => !todo.done);
+    updateLocalStorage(todos);
     render(todos);
   }
 
@@ -143,7 +151,19 @@
     addTodoButton.addEventListener("click", addTodoHandler);
     clearCompletedButton.addEventListener("click", removeCompletedTodosHandler);
     navElement.addEventListener("click", changeFilterHandler);
+    listContainer.addEventListener("click", handleClick);
+    render(todos);
   }
 
   window.addEventListener("load", init);
+
+  if (typeof module !== "undefined" && module.exports) {
+    module.exports = {
+      Todo,
+      addTodoHandler,
+      render,
+      removeCompletedTodosHandler,
+      changeFilterHandler,
+    };
+  }
 })();
