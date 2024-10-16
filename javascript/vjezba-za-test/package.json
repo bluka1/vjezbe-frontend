@@ -1,0 +1,8 @@
+{
+  "scripts": {
+    "minify": "uglifyjs script.js --output script.min.js"
+  },
+  "dependencies": {
+    "uglify-js": "^3.19.3"
+  }
+}

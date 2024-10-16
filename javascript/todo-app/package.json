@@ -1,16 +1,19 @@
 {
-  "name": "todo-app",
+  "name": "todo-app-by-luka",
   "version": "1.0.0",
-  "main": "index.html",
+  "main": "src/script2.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "build": "parcel build"
   },
   "keywords": [],
   "author": "",
   "type": "commonjs",
   "license": "ISC",
-  "description": "",
+  "description": "Jednostavna todo app",
   "devDependencies": {
+    "@parcel/packager-raw-url": "^2.12.0",
+    "@parcel/transformer-webmanifest": "^2.12.0",
     "jest": "^29.7.0",
     "parcel": "^2.12.0"
   },
