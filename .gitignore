@@ -11,3 +11,5 @@ node_modules
 /css/scss/*.css
 /css/scss/*.map
 /razvojna-okolina-materijali
+/javascript/npmTest
+/javascript/test
