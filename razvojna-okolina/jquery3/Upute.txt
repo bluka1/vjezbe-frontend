@@ -1,0 +1,2 @@
+1. Prepišite XHR poziv u jQuery AJAX poziv.
+2. Dodajte funkciju koja se poziva na neuspješan kraj API poziva. Ta funkcija ispisuje poruku na ekranu sa dodatnim infomacijama o greški.
