@@ -41,3 +41,4 @@ Ovo je repozitorij gdje će biti sve vježbe koje ćemo obrađivati tijekom pred
 #### Knjige
 
 - Eloquent Javascript - [link](https://eloquentjavascript.net/)
+- The Road to Learn React - [link](https://github.com/bluka1/vjezbe-frontend/blob/master/react/the-road-to-learn-react.pdf)
