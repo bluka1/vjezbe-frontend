@@ -1,7 +1,4 @@
 export function Description(props) {
-  console.log("props:", props);
-  console.log("props.children:", props.children);
-
   return (
     <div>
       <p>Title: {props.title}</p>

@@ -1,8 +1,27 @@
 import { Description } from "./Description";
 import Card from "./Card";
 import PortfolioItem from "./PortfolioItem";
+import React from "react";
 
 export default function App() {
+  const [state, setState] = React.useState({
+    korisnici: [
+      {
+        ime: "Ante",
+        godine: 20,
+      },
+      {
+        ime: "Ivo",
+        godine: 21,
+      },
+      {
+        ime: "Tvrtko",
+        godine: 22,
+      },
+    ],
+    text: "Ovo je proizvoljna varijabla unutar statea",
+  });
+
   const obj = {
     title: "Hugo i setnja",
     summary:
@@ -17,8 +36,28 @@ export default function App() {
         magni modi, omnis placeat reiciendis obcaecati? Sapiente sint laborum
         dicta perferendis!
       </h3>
+
+      <hr />
+
+      {state.korisnici.map((korisnik) => (
+        <div className="korisnik">
+          <p>Ime: {korisnik.ime}</p>
+          <p>Godine: {korisnik.godine}</p>
+        </div>
+      ))}
+
+      <hr />
       <section>
         <hr />
+        <div>
+          <button
+            onClick={() =>
+              setState((prevState) => ({ ...prevState, text: Math.random() }))
+            }
+          >
+            PROMJENA TEXTA
+          </button>
+        </div>
         <Description
           title="Hugo Hugo"
           summary="Film iz proslog stoljeca"
@@ -29,6 +68,7 @@ export default function App() {
           guster="bonnie"
           random={Math.random()}
         >
+          <p>TEXT STATE FROM APP COMPONENT: {state.text}</p>
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus,
             excepturi!
