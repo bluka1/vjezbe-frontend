@@ -1,10 +1,12 @@
 import { Description } from "./Description";
 import Card from "./Card";
 import PortfolioItem from "./PortfolioItem";
-import React from "react";
+import { useState } from "react";
+import ChangeButton from "./ChangeButton";
+import Korisnik from "./Korisnik";
 
 export default function App() {
-  const [state, setState] = React.useState({
+  const [state, setState] = useState({
     korisnici: [
       {
         ime: "Ante",
@@ -21,6 +23,32 @@ export default function App() {
     ],
     text: "Ovo je proizvoljna varijabla unutar statea",
   });
+
+  const changeName = (index, novoIme) => {
+    setState((prevState) => {
+      const newKorisnici = prevState.korisnici.map((korisnik, idx) => {
+        if (idx === index) {
+          korisnik.ime = novoIme;
+        }
+        return korisnik;
+      });
+
+      return {
+        ...prevState,
+        korisnici: newKorisnici,
+      };
+    });
+  };
+
+  const changeYearsHandler = () => {
+    setState((prevState) => ({
+      ...prevState,
+      korisnici: prevState.korisnici.map((korisnik) => ({
+        ime: korisnik.ime,
+        godine: korisnik.godine + 1,
+      })),
+    }));
+  };
 
   const obj = {
     title: "Hugo i setnja",
@@ -39,11 +67,9 @@ export default function App() {
 
       <hr />
 
-      {state.korisnici.map((korisnik) => (
-        <div className="korisnik">
-          <p>Ime: {korisnik.ime}</p>
-          <p>Godine: {korisnik.godine}</p>
-        </div>
+      <ChangeButton changeState={changeYearsHandler} />
+      {state.korisnici.map((korisnik, index) => (
+        <Korisnik korisnik={korisnik} index={index} promijeniIme={changeName} />
       ))}
 
       <hr />
