@@ -56,6 +56,18 @@ export default function App() {
       "Film datira iz 1990. godine, glavni lik je Hugo koji voli setati.",
   };
 
+  const dodajKorisnika = () => {
+    setState((prevState) => {
+      const newKorisnici = [...prevState.korisnici];
+      newKorisnici.push({ ime: "Filip", godine: 23 });
+
+      return {
+        ...prevState,
+        korisnici: newKorisnici,
+      };
+    });
+  };
+
   return (
     <div>
       <h1>Naslov aplikacije</h1>
@@ -68,8 +80,18 @@ export default function App() {
       <hr />
 
       <ChangeButton changeState={changeYearsHandler} />
+
+      <hr />
+      <button onClick={dodajKorisnika}>Dodaj korisnika</button>
+      <hr />
+
       {state.korisnici.map((korisnik, index) => (
-        <Korisnik korisnik={korisnik} index={index} promijeniIme={changeName} />
+        <Korisnik
+          key={Math.random().toFixed(7)}
+          korisnik={korisnik}
+          index={index}
+          promijeniIme={changeName}
+        />
       ))}
 
       <hr />
