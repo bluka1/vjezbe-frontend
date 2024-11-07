@@ -4,6 +4,7 @@ import PortfolioItem from "./PortfolioItem";
 import { useState } from "react";
 import ChangeButton from "./ChangeButton";
 import Korisnik from "./Korisnik";
+import DodajKorisnikaForm from "./DodajKorisnikaForm";
 
 export default function App() {
   const [state, setState] = useState({
@@ -56,10 +57,10 @@ export default function App() {
       "Film datira iz 1990. godine, glavni lik je Hugo koji voli setati.",
   };
 
-  const dodajKorisnika = () => {
+  const dodajKorisnika = (ime, godine) => {
     setState((prevState) => {
       const newKorisnici = [...prevState.korisnici];
-      newKorisnici.push({ ime: "Filip", godine: 23 });
+      newKorisnici.push({ ime, godine });
 
       return {
         ...prevState,
@@ -79,10 +80,14 @@ export default function App() {
 
       <hr />
 
-      <ChangeButton changeState={changeYearsHandler} />
+      <div>
+        <ChangeButton changeState={changeYearsHandler} />
+      </div>
 
       <hr />
-      <button onClick={dodajKorisnika}>Dodaj korisnika</button>
+      <div>
+        <DodajKorisnikaForm handleSubmit={dodajKorisnika} />
+      </div>
       <hr />
 
       {state.korisnici.map((korisnik, index) => (

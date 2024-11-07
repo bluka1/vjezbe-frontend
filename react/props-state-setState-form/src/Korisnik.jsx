@@ -1,7 +1,14 @@
+import { useState } from "react";
+
 export default function Korisnik(props) {
+  const [ime, setIme] = useState(props.korisnik.ime);
+
   const inputChangeHandler = (event) => {
-    const newName = event.target.value;
-    props.promijeniIme(props.index, newName);
+    setIme(event.target.value);
+  };
+
+  const blurHandler = () => {
+    props.promijeniIme(props.index, ime);
   };
 
   return (
@@ -11,8 +18,9 @@ export default function Korisnik(props) {
           type="text"
           name=""
           id=""
-          value={props.korisnik.ime}
-          onInput={inputChangeHandler}
+          value={ime}
+          onChange={inputChangeHandler}
+          onBlur={blurHandler}
         />
       </div>
       <p>Ime: {props.korisnik.ime}</p>
