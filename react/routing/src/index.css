@@ -1,0 +1,32 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+div {
+  margin: 20px;
+}
+
+nav {
+  border-radius: 1px solid black;
+  display: flex;
+  gap: 20px;
+  margin: 20px;
+  padding: 20px;
+}
+
+.navlink {
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 8px;
+  color: black;
+  padding: 10px 20px;
+  text-decoration: none;
+}
+
+.active {
+  background-color: lightblue;
+}
