@@ -1,9 +1,4 @@
-import { NavLink, Routes, Route, Link, Navigate } from "react-router-dom";
-import About from "./About";
-import Contact from "./Contact";
-import Portfolio from "./Portfolio";
-import NotFound from "./NotFound";
-import Homepage from "./Homepage";
+import { NavLink, Outlet } from "react-router-dom";
 
 function App() {
   return (
@@ -34,13 +29,16 @@ function App() {
           PORTFOLIO
         </NavLink>
       </nav>
-      <Routes>
+
+      <Outlet />
+
+      {/* <Routes>
         <Route path="/" Component={Homepage} />
         <Route path="/about" Component={About} />
         <Route path="/contact" Component={Contact} />
         <Route path="/portfolio" Component={Portfolio} />
         <Route path="*" Component={NotFound} />
-      </Routes>
+      </Routes> */}
     </div>
   );
 }
