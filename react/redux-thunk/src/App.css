@@ -1,0 +1,16 @@
+.app {
+  margin: 0 auto;
+  width: 500px;
+  padding-top: 100px;
+  position: relative;
+  text-align: justify;
+}
+
+.app h1,
+.app h3 {
+  text-align: center;
+}
+
+.app p {
+  padding-top: 24px;
+}
