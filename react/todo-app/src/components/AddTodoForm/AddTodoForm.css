@@ -1,0 +1,24 @@
+.add-todo-form {
+  border: var(--border-black);
+  border-radius: var(--border-radius);
+  display: flex;
+}
+
+.add-todo-form input {
+  border: none;
+  background-color: transparent;
+  flex-grow: 1;
+  padding: 10px 20px;
+}
+
+.add-todo-form button {
+  background-color: transparent;
+  border: var(--border-black);
+  border-top: none;
+  border-right: none;
+  border-bottom: none;
+  border-top-right-radius: var(--border-radius-adjusted);
+  border-bottom-right-radius: var(--border-radius-adjusted);
+  padding-left: 10px;
+  padding-right: 10px;
+}

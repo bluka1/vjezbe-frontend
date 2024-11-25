@@ -8,11 +8,14 @@
 
 :root {
   --bg-color: whitesmoke;
+  --bg-color-dark: #333;
   --border-black: 1px solid black;
   --border-radius: 8px;
+  --border-radius-adjusted: calc(var(--border-radius) - 1px);
   --font-family: Verdana, Geneva, Tahoma, sans-serif;
   --max-app-width: 600px;
   --text-color: #333;
+  --text-color-light: whitesmoke;
 }
 
 html,

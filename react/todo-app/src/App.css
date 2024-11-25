@@ -1,10 +1,17 @@
 .app {
-  border: var(--border-black);
-  border-radius: var(--border-radius);
   margin: 50px auto;
   max-width: var(--max-app-width);
 }
 
 .app h1 {
   text-align: center;
+}
+
+.clear-completed-button {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  display: block;
+  margin-left: auto;
+  margin-top: 30px;
 }

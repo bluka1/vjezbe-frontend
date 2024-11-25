@@ -1,0 +1,32 @@
+.nav {
+  border: var(--border-black);
+  border-radius: var(--border-radius);
+  display: flex;
+  margin: 30px auto;
+  width: fit-content;
+}
+
+.nav-link {
+  background-color: transparent;
+  border: none;
+  padding: 8px 16px;
+}
+
+.nav-link + .nav-link {
+  border-left: var(--border-black);
+}
+
+.nav-link-active {
+  background-color: var(--bg-color-dark);
+  color: var(--text-color-light);
+}
+
+.nav button:first-of-type {
+  border-top-left-radius: var(--border-radius-adjusted);
+  border-bottom-left-radius: var(--border-radius-adjusted);
+}
+
+.nav button:last-of-type {
+  border-top-right-radius: var(--border-radius-adjusted);
+  border-bottom-right-radius: var(--border-radius-adjusted);
+}
