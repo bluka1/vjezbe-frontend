@@ -1,0 +1,10 @@
+.app {
+  border: var(--border-black);
+  border-radius: var(--border-radius);
+  margin: 50px auto;
+  max-width: var(--max-app-width);
+}
+
+.app h1 {
+  text-align: center;
+}
