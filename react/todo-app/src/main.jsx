@@ -4,9 +4,12 @@ import { createRoot } from "react-dom/client";
 import App from "./App.jsx";
 
 import "./index.css";
+import { TodosContextProvider } from "./context";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
-    <App />
+    <TodosContextProvider>
+      <App />
+    </TodosContextProvider>
   </StrictMode>
 );

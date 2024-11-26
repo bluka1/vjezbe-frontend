@@ -1,9 +1,11 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 
 import { Todo } from "../../models";
 import "./AddTodoForm.css";
+import { TodosContext } from "../../context";
 
-export const AddTodoForm = ({ handleSubmit }) => {
+export const AddTodoForm = () => {
+  const { handleAddTodo } = useContext(TodosContext);
   const [text, setText] = useState("");
 
   const handleSubmitForm = (e) => {
@@ -11,7 +13,9 @@ export const AddTodoForm = ({ handleSubmit }) => {
     if (!text.trim()) return;
 
     const newTodo = new Todo(text);
-    handleSubmit(newTodo);
+    console.log("handleAddTodo:", handleAddTodo);
+
+    handleAddTodo(newTodo);
     setText("");
   };
 

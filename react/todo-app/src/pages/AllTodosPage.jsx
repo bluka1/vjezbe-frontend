@@ -1,6 +1,9 @@
+import { useContext } from "react";
 import { TodoItem } from "../components";
+import { TodosContext } from "../context";
 
-export const AllTodosPage = ({ todos, toggleTodo, deleteTodo }) => {
+export const AllTodosPage = () => {
+  const { todos } = useContext(TodosContext);
   return (
     <section>
       {todos?.map((todo) => (
@@ -9,8 +12,6 @@ export const AllTodosPage = ({ todos, toggleTodo, deleteTodo }) => {
           id={todo.id}
           isDone={todo.isDone}
           text={todo.text}
-          toggleTodo={toggleTodo}
-          deleteTodo={deleteTodo}
         />
       ))}
     </section>

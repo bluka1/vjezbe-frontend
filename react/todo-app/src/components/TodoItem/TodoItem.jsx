@@ -1,9 +1,10 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import xicon from "../../assets/x.svg";
 import "./TodoItem.css";
+import { TodosContext } from "../../context";
 
-export const TodoItem = ({ id, text, isDone, toggleTodo, deleteTodo }) => {
-  // const [isDone, setIsDone] = useState(isDone);
+export const TodoItem = ({ id, text, isDone }) => {
+  const { deleteTodo, toggleTodo } = useContext(TodosContext);
   const classes = isDone ? "done" : null;
 
   return (
