@@ -1,0 +1,31 @@
+.todo-item {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  padding: 16px 10px;
+}
+
+.todo-item p {
+  flex-grow: 1;
+  padding: 0 10px;
+}
+
+.todo-item button {
+  align-items: center;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  width: 24px;
+}
+
+.todo-item button img:hover {
+  background-color: var(--color-danger);
+  border: var(--border-black);
+  border-radius: var(--border-radius);
+}
+
+.done {
+  text-decoration: line-through;
+}

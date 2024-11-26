@@ -15,3 +15,9 @@
   margin-left: auto;
   margin-top: 30px;
 }
+
+.main-part {
+  background-color: var(--bg-color-light);
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow-right-bottom), var(--box-shadow-left-top);
+}
