@@ -9,7 +9,8 @@ function App() {
   return (
     <div>
       <Form setPost={setPost} setKid={setKid} />
-      {post && kid && <Post data={post} kid={kid} />}
+      {post && <Post data={post} classNames="post" />}
+      {kid && <Post data={kid} classNames="kid" />}
     </div>
   );
 }
