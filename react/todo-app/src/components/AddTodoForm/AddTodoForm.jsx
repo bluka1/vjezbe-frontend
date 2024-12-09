@@ -13,7 +13,6 @@ export const AddTodoForm = () => {
     if (!text.trim()) return;
 
     const newTodo = new Todo(text);
-    console.log("handleAddTodo:", handleAddTodo);
 
     handleAddTodo(newTodo);
     setText("");

@@ -1,6 +1,7 @@
 import { useContext } from "react";
+import { Routes, Route } from "react-router";
 
-import { AllTodosPage } from "./pages";
+import { ActiveTodosPage, AllTodosPage, CompletedTodosPage } from "./pages";
 import { AddTodoForm, NavBar } from "./components";
 import { TodosContext } from "./context";
 
@@ -15,7 +16,11 @@ function App() {
       <NavBar />
       <div className="main-part">
         <AddTodoForm />
-        <AllTodosPage />
+        <Routes>
+          <Route path="/" element={<AllTodosPage />} />
+          <Route path="/active" element={<ActiveTodosPage />} />
+          <Route path="/completed" element={<CompletedTodosPage />} />
+        </Routes>
       </div>
       <button onClick={clearCompletedTodos} className="clear-completed-button">
         Clear completed

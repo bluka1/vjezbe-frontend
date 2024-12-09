@@ -9,7 +9,9 @@
 .nav-link {
   background-color: transparent;
   border: none;
+  color: var(--text-color);
   padding: 8px 16px;
+  text-decoration: none;
 }
 
 .nav-link + .nav-link {
@@ -21,12 +23,12 @@
   color: var(--text-color-light);
 }
 
-.nav button:first-of-type {
+.nav .nav-link:first-of-type {
   border-top-left-radius: var(--border-radius-adjusted);
   border-bottom-left-radius: var(--border-radius-adjusted);
 }
 
-.nav button:last-of-type {
+.nav .nav-link:last-of-type {
   border-top-right-radius: var(--border-radius-adjusted);
   border-bottom-right-radius: var(--border-radius-adjusted);
 }

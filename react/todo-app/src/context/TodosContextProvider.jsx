@@ -36,18 +36,20 @@ const TodosContextProvider = ({ children }) => {
     setTodos(newTodos);
   };
 
-  <TodosContext.Provider
-    value={{
-      todos,
-      setTodos,
-      handleAddTodo,
-      toggleTodo,
-      deleteTodo,
-      clearCompletedTodos,
-    }}
-  >
-    {children}
-  </TodosContext.Provider>;
+  return (
+    <TodosContext.Provider
+      value={{
+        todos,
+        setTodos,
+        handleAddTodo,
+        toggleTodo,
+        deleteTodo,
+        clearCompletedTodos,
+      }}
+    >
+      {children}
+    </TodosContext.Provider>
+  );
 };
 
 export default TodosContextProvider;
