@@ -1,0 +1,47 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --bg-color: whitesmoke;
+  --bg-color-dark: #333;
+  --bg-color-light: white;
+  --border-black: 1px solid black;
+  --border-radius: 8px;
+  --border-radius-adjusted: calc(var(--border-radius) - 1px);
+  --box-shadow-right-bottom: 2px 2px 6px 4px grey;
+  --box-shadow-left-top: -2px -2px 6px 4px grey;
+  --color-danger: red;
+  --font-family: Verdana, Geneva, Tahoma, sans-serif;
+  --max-app-width: 600px;
+  --text-color: #333;
+  --text-color-light: whitesmoke;
+}
+
+html,
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: var(--font-family);
+}
+
+.form {
+  display: block;
+  margin: 30px auto;
+}
+
+.post {
+  margin: 20px;
+}
+.post p,
+.kid p {
+  margin: 10px;
+}
+
+.kid {
+  margin: 40px;
+}
