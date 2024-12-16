@@ -1,0 +1,32 @@
+.home {
+  align-items: center;
+  background-color: var(--bg-color-lighter);
+  display: flex;
+  gap: 200px;
+  justify-content: space-between;
+  padding: 96px 0;
+}
+
+.home-content b {
+  color: var(--highlight-text-color);
+}
+
+.home-content h2 {
+  color: var(--heading-text-color);
+  font-size: 42px;
+  font-weight: bold;
+  margin: 32px 0 24px 0;
+}
+
+.home-content button {
+  background-color: var(--cta-button-bg-color);
+  border: none;
+  border-radius: 4px;
+  color: var(--cta-button-text-color);
+  margin-top: 24px;
+  padding: 8px 16px;
+}
+
+.home-image {
+  border-radius: var(--image-border-radius);
+}

@@ -1,0 +1,43 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --active-link-color: #fff;
+  --app-max-width: 1110px;
+  --bg-color: #020617;
+  --bg-color-lighter: #111827;
+  --cta-button-bg-color: #facc15;
+  --cta-button-text-color: #000;
+  --font-family: "Lexend Deca", sans-serif;
+  --heading-text-color: #f3f4f6;
+  --highlight-text-color: #eab308;
+  --image-border-radius: 24px;
+  --link-color: #6b7280;
+  --nav-gap: 28px;
+  --text-color: #6b7280;
+}
+
+html,
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: var(--font-family);
+}
+
+.max-width {
+  margin: 0 auto;
+  max-width: var(--app-max-width);
+}
+
+.dark-bg {
+  background-color: var(--bg-color);
+}
+
+.lighter-bg {
+  background-color: var(--bg-color-lighter);
+}

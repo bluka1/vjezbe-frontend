@@ -1,0 +1,25 @@
+.header {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  padding: 14px 0;
+}
+
+.header h1 {
+  color: var(--heading-text-color);
+}
+
+.header h1 span {
+  color: var(--highlight-text-color);
+}
+
+.header nav a {
+  color: var(--link-color);
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+nav {
+  display: flex;
+  gap: var(--nav-gap);
+}
