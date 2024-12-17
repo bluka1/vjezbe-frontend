@@ -1,0 +1,87 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --bg-color: #020617;
+  --font-family: "Lexend Deca", sans-serif;
+  --text-color: #6b7280;
+}
+
+html,
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: var(--font-family);
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+header,
+footer {
+  background-color: lightgrey;
+  padding: 10px;
+}
+
+.header {
+  align-items: center;
+  display: flex;
+  height: 70px;
+  justify-content: space-between;
+}
+
+.header nav {
+  display: flex;
+  gap: 14px;
+}
+
+.header nav a {
+  color: var(--text-color);
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.footer {
+  text-align: center;
+}
+
+main {
+  background-color: lightskyblue;
+  display: flex;
+  flex-grow: 1;
+}
+
+.homepage {
+  align-items: center;
+  display: flex;
+  justify-content: space-around;
+  gap: 100px;
+  padding: 100px;
+}
+
+.homepage div {
+  border: 1px solid black;
+  border-radius: 8px;
+  flex: 1;
+  height: 300px;
+  padding: 30px;
+}
+
+.intro-content p {
+  margin: 20px 0;
+}
+
+.intro-content button {
+  border: none;
+  border-radius: 8px;
+  background-color: lightgrey;
+  padding: 12px 24px;
+}
